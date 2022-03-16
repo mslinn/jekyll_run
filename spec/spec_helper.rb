@@ -3,8 +3,6 @@
 require "jekyll"
 require_relative "../lib/jekyll_run"
 
-Jekyll.logger.log_level = :info
-
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus

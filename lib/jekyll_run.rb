@@ -32,7 +32,7 @@ module Jekyll
     # Method prescribed by the Jekyll plugin lifecycle.
     # @return [String]
     def render(context)
-      RunTag.logger = Jekyll::LoggerFactory.new("run", context.config, :warn)
+      RunTag.logger = Jekyll::LoggerFactory.new("run", context.config, :info)
       RunTag.logger.info "Running #{@command}".green
       output = `#{@command}`.rstrip
       "<span class='unselectable'>$ </span>#{@command}\n<span class='unselectable'>#{output}</span>"
