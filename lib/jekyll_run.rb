@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require "jekyll"
-require "jekyll_logger_factory"
 require_relative "jekyll_run/version"
+require "jekyll_logger_factory"
 
 # Jekyll tag plugin that executes a program and returns the output from STDOUT.
 # Because the output includes the command that was executed,
