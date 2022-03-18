@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r!\Aexe/!) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'jekyll'
   spec.add_dependency 'jekyll_plugin_logger'
 
   spec.add_development_dependency 'debase'
