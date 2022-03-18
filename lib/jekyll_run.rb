@@ -33,4 +33,4 @@ module Jekyll
 end
 
 Liquid::Template.register_tag("run", Jekyll::RunTag)
-Jekyll.info "Loaded run plugin."
+Jekyll.info "Loaded jekyll_run plugin."
