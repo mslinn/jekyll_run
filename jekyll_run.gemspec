@@ -31,11 +31,14 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r!\Aexe/!) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'jekyll'
+  spec.add_dependency 'jekyll', '>= 3.5.0'
   spec.add_dependency 'jekyll_plugin_logger'
 
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'debase'
-  spec.add_development_dependency 'jekyll', '>= 3.5'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rspec', "~> 3.0"
+  spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-jekyll'
   spec.add_development_dependency 'rubocop-rake'
   spec.add_development_dependency 'rubocop-rspec'

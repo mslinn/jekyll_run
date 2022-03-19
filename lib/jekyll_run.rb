@@ -30,7 +30,8 @@ module Jekyll
       "<span class='unselectable'>$ </span>#{@command}\n<span class='unselectable'>#{output}</span>"
     end
   end
+
+  info { "Loaded jekyll_run plugin." }
 end
 
 Liquid::Template.register_tag("run", Jekyll::RunTag)
-Jekyll.info "Loaded jekyll_run plugin."
