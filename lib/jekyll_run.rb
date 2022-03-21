@@ -31,7 +31,7 @@ module Jekyll
     end
   end
 
-  info { "Loaded jekyll_run plugin." }
+  info { "Loaded jekyll_run v#{JekyllRun::VERSION} plugin." }
 end
 
 Liquid::Template.register_tag("run", Jekyll::RunTag)
