@@ -20,18 +20,18 @@ module Jekyll
       super
       @command = command_line
       @command = "" if @command.nil? || @command.empty?
+      @logger = PluginLogger.new
     end
 
     # Method prescribed by the Jekyll plugin lifecycle.
     # @return [String]
     def render(_context)
-      info "Running #{@command}"
+      @logger.info "Running #{@command}"
       output = `#{@command}`.rstrip
       "<span class='unselectable'>$ </span>#{@command}\n<span class='unselectable'>#{output}</span>"
     end
   end
-
-  info { "Loaded jekyll_run v#{JekyllRun::VERSION} plugin." }
 end
 
+PluginMetaLogger.instance.info { "Loaded jekyll_run v#{JekyllRun::VERSION} plugin." }
 Liquid::Template.register_tag("run", Jekyll::RunTag)
