@@ -20,7 +20,7 @@ module Jekyll
       super
       @command = command_line
       @command = "" if @command.nil? || @command.empty?
-      @logger = PluginLogger.new
+      @logger = PluginLogger.new(self)
     end
 
     # Method prescribed by the Jekyll plugin lifecycle.
