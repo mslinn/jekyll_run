@@ -1,26 +1,11 @@
 #!/usr/bin/env ruby
+
 # frozen_string_literal: true
 
-require "fileutils"
-
-gemspec_name = "jekyll_run.gemspec"
-lines = File.readlines(gemspec_name, :chomp => true)
-if lines.find { |line| line.match?(%r!homepage *= *"TODO!) }
-  abort <<~END_ERR
-    Error: #{gemspec_name} must be edited and the TODO items replaced with information.
-    Executing bin/run_this_first will perform some of the edits automatically.
-  END_ERR
-end
-
 require "bundler/setup"
-require gemspec_name.delete_suffix ".gemspec"
-
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
-
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
-
+require "fileutils"
 require "irb"
+require "jekyll_run"
+require "liquid"
+
 IRB.start(__FILE__)
