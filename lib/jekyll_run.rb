@@ -25,7 +25,7 @@ class RunTag < Liquid::Tag
   # Method prescribed by the Jekyll plugin lifecycle.
   # @return [String]
   def render(_context)
-    @logger.info "Running #{@command}"
+    @logger.debug "Running #{@command}"
     output = `#{@command}`.rstrip
     "<span class='unselectable'>$ </span>#{@command}\n<span class='unselectable'>#{output}</span>"
   end
