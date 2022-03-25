@@ -19,7 +19,7 @@ class RunTag < Liquid::Tag
     super
     @command = command_line
     @command = "" if @command.nil? || @command.empty?
-    @logger = PluginMetaLogger.new_logger(self)
+    @logger = PluginMetaLogger.instance.new_logger(self)
   end
 
   # Method prescribed by the Jekyll plugin lifecycle.
