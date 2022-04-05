@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.6.0"
   spec.summary = "Jekyll tag plugin that executes a program and returns the output from STDOUT."
   spec.test_files = spec.files.grep(%r!^(test|spec|features)/!)
-  spec.version = JekyllRun::VERSION
+  spec.version = JekyllRunVersion::VERSION
 
   spec.add_dependency "jekyll", ">= 3.5.0"
   spec.add_dependency "jekyll_plugin_logger"
