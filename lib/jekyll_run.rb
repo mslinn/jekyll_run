@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
-require "jekyll_plugin_logger"
-require "liquid"
-require_relative "jekyll_run/version"
+require 'jekyll_plugin_logger'
+require 'liquid'
+require_relative 'jekyll_run/version'
 
 # This implements a Jekyll tag plugin that executes a program and returns the output from STDOUT.
 # Because the output includes the command that was executed,
@@ -21,7 +19,7 @@ class RunTag < Liquid::Tag
   def initialize(tag_name, command_line, parse_context)
     super
     @command = command_line
-    @command = "" if @command.nil? || @command.empty?
+    @command = '' if @command.nil? || @command.empty?
     @logger = PluginMetaLogger.instance.new_logger(self, PluginMetaLogger.instance.config)
   end
 
@@ -36,4 +34,4 @@ class RunTag < Liquid::Tag
 end
 
 PluginMetaLogger.instance.info { "Loaded jekyll_run v#{JekyllRunVersion::VERSION} plugin." }
-Liquid::Template.register_tag("run", RunTag)
+Liquid::Template.register_tag('run', RunTag)
