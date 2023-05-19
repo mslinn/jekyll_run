@@ -7,6 +7,17 @@ and contains unselectable span tags,
 this plugin is intended to be embedded within a pre tag.
 
 
+## CSS
+The following CSS must be used in order for the plugin to work:
+```css
+.unselectable {
+  color: #7922f9;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
