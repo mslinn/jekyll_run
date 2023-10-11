@@ -1,14 +1,15 @@
-`jekyll_run`
-[![Gem Version](https://badge.fury.io/rb/jekyll_run.svg)](https://badge.fury.io/rb/jekyll_run)
-===========
+# `jekyll_run` [![Gem Version](https://badge.fury.io/rb/jekyll_run.svg)](https://badge.fury.io/rb/jekyll_run)
 
-`jekyll_run` Jekyll tag plugin that executes a program and returns the output from STDOUT. Because the output includes the command that was executed,
+`jekyll_run` Jekyll tag plugin that executes a program and returns the output from STDOUT.
+Because the output includes the command that was executed,
 and contains unselectable span tags,
 this plugin is intended to be embedded within a pre tag.
 
 
 ## CSS
+
 The following CSS must be used in order for the plugin to work:
+
 ```css
 .unselectable {
   color: #7922f9;
@@ -28,14 +29,13 @@ gem 'jekyll_run'
 
 And then execute:
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install jekyll_run
+```shell
+$ bundle
+```
 
 
 ## Additional Information
+
 More information is available on
 [Mike Slinn&rsquo;s website](https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html).
 
@@ -45,11 +45,13 @@ More information is available on
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 Install development dependencies like this:
+
 ```
-$ BUNDLE_WITH="development" bundle install
+$ BUNDLE_WITH="development" bundle
 ```
 
 To build and install this gem onto your local machine, run:
+
 ```shell
 $ bundle exec rake install
 jekyll_run 1.0.0 built to pkg/jekyll_run-0.1.0.gem.
@@ -70,12 +72,15 @@ jekyll_run (1.0.0)
 ```
 
 To release a new version,
+
   1. Update the version number in `version.rb`.
   2. Commit all changes to git; if you don't the next step might fail with an unexplainable error message.
   3. Run the following:
+
      ```shell
      $ bundle exec rake release
      ```
+
      The above creates a git tag for the version, commits the created tag,
      and pushes the new `.gem` file to [RubyGems.org](https://rubygems.org).
 
