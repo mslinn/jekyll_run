@@ -7,8 +7,13 @@
     {
       "debugPort": "0",
       "name": "Attach rdbg",
-      "type": "rdbg",
       "request": "attach",
+      "type": "rdbg",
+    },
+    {
+      "name": "Attach with ruby_lsp",
+      "request": "attach",
+      "type": "ruby_lsp",
     },
     {
       "args": [
@@ -18,8 +23,9 @@
       "debugPort": "0",
       "name": "RSpec - all",
       "request": "launch",
-      "script": "${workspaceRoot}/exe/rspec",
+      "script": "${workspaceRoot}/binstub/rspec",
       "type": "rdbg",
+      "useBundler": true,
     },
     {
       "args": [
@@ -30,8 +36,9 @@
       "debugPort": "0",
       "name": "RSpec - active spec file only",
       "request": "launch",
-      "script": "${workspaceRoot}/exe/rspec",
+      "script": "${workspaceRoot}/binstub/rspec",
       "type": "rdbg",
+      "useBundler": true,
     }
   ]
 }

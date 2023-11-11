@@ -3,7 +3,7 @@
 require 'bundler/setup'
 require 'fileutils'
 require 'irb'
-require 'jekyll_run'
 require 'liquid'
+require_relative '../lib/jekyll_run'
 
 IRB.start(__FILE__)
